@@ -7,7 +7,7 @@ export default function Header(props) {
                 <span>Address: {props.address}</span>
             </div>
 
-            <h1>João Victor Simões Alves</h1>
+            <h1>{props.name}</h1>
 
             <div className="social-media">
                 <a href="/">Instagram: {props.instagram}</a><br />
