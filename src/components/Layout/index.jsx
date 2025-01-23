@@ -23,7 +23,8 @@ export default function Layout() {
         />
 
         {infoEnterprise.map(info => {
-          return <BodyInfo 
+          return <BodyInfo
+            key={info.id}
             position={info.position}
             organ={info.enterprise}
             description={info.description}
@@ -32,6 +33,7 @@ export default function Layout() {
 
         {infoSchool.map(info => {
           return <BodyInfo
+            key={info.id}
             position={info.position}
             organ={info.school}
             description={info.description}

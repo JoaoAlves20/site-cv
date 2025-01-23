@@ -1,19 +1,23 @@
+import { Container } from "./style"
+
 export default function Header(props) {
     return (
-        <header>
+        <Container>
             <div className="contacts">
-                <span>Email: {props.email}</span><br />
-                <span>Phone Number: {props.phoneNumber}</span><br />
+                <span>Email: {props.email}</span>
+                <span>Phone Number: {props.phoneNumber}</span>
+            </div>
+
+            <div className="name-address">
+                <h1 className="title">{props.name}</h1>
                 <span>Address: {props.address}</span>
             </div>
 
-            <h1>{props.name}</h1>
-
             <div className="social-media">
-                <a href="/">Instagram: {props.instagram}</a><br />
-                <a href="/">GitHub: {props.github}</a><br />
+                <a href="/">Instagram: {props.instagram}</a>
+                <a href="/">GitHub: {props.github}</a>
                 <a href="/">Linkedin: {props.linkedin}</a>
             </div>
-        </header>
+        </Container>
     )
 }
