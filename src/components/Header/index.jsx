@@ -4,8 +4,8 @@ export default function Header(props) {
     return (
         <Container>
             <div className="contacts">
-                <span>Email: {props.email}</span>
-                <a href="https://wa.me/message/XXVTO6X6JXX7P1">Phone Number: {props.phoneNumber}</a>
+                <span>{props.email}</span>
+                <a href="https://wa.me/message/XXVTO6X6JXX7P1">{props.phoneNumber}</a>
             </div>
 
             <div className="name-address">
