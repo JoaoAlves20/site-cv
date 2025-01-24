@@ -5,6 +5,8 @@ import { infoEnterprise } from '../../mocks/infoEnterprise'
 import { infoSchool } from '../../mocks/infoSchool'
 import { morePersonalInfo } from '../../mocks/morePersonalInfo'
 
+import { Container } from './style'
+
 export default function Layout() {
   const {
     address, firstName, lastName
@@ -22,23 +24,29 @@ export default function Layout() {
           name={`${firstName} ${lastName}`}
         />
 
-        {infoEnterprise.map(info => {
-          return <BodyInfo
-            key={info.id}
-            position={info.position}
-            organ={info.enterprise}
-            description={info.description}
-          />
-        })}
+        <Container>
+          {infoEnterprise.map(info => {
+            return <BodyInfo
+              key={info.id}
+              position={info.position}
+              organ={info.enterprise}
+              time={info.time}
+              description={info.description}
+            />
+          })}
+        </Container>
 
-        {infoSchool.map(info => {
-          return <BodyInfo
-            key={info.id}
-            position={info.position}
-            organ={info.school}
-            description={info.description}
-          />
-        })}
+        <Container>
+          {infoSchool.map(info => {
+            return <BodyInfo
+              key={info.id}
+              position={info.position}
+              organ={info.school}
+              time={info.time}
+              description={info.description}
+            />
+          })}
+        </Container>
       </>
   )
 }
