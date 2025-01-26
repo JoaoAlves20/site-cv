@@ -14,6 +14,13 @@ export const Container = styled.header`
         cursor: pointer;
         text-decoration: none;
         color: #fff;
+        padding: 3px;
+        border-radius: 10px;
+    }
+
+    a:hover {
+        background-color: #fff;
+        color: #333;
     }
 
     .contacts {
